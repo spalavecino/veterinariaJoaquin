@@ -1,0 +1,20 @@
+.Button {
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    height: 45px;
+    padding: 10px 25px;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+
+    i {
+        font-size: 20px;
+        margin-right: 25px;
+    }
+
+    span {}
+}
