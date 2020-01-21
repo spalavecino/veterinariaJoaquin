@@ -1,0 +1,9 @@
+.Sidebar {
+    border-right: 1px solid #ddd;
+    height: calc(100vh - 72px);
+    left: 0;
+    position: fixed;
+    top: 72px;
+    width: 250px;
+    z-index: 1;
+}
