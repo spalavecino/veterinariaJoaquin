@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.scss";
 import Login from "../login";
 import Layout from "../components/layout";
 import Dashboard from "../dashboard";

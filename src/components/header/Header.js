@@ -1,8 +1,14 @@
 import React from "react";
-import "./Header.scss";
 
 const Header = () => {
-  return <header className="Header">El header</header>;
+  return (
+    <header className="Header">
+      <nav>
+        {/* <img src="" alt=""/> */}
+        <span>Veterinaria Joaquin</span>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;
