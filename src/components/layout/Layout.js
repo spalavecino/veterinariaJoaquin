@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./Layout.scss";
-import Sidebar from "../sidebar";
-import Header from "../header";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Header from "../header";
+import Sidebar from "../sidebar";
+import "./Layout.scss";
 
 const Layout = ({ children }) => {
   const [location] = useState(useLocation());

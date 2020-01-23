@@ -1,23 +1,67 @@
 .Header {
-    background-color: $colorPrimario;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-    height: 72px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2;
+  background-color: $colorPrimario;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  height: 72px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
 
-    nav {
-        align-items: center;
-        background-color: transparent;
-        display: flex;
-        height: 100%;
-        justify-content: space-around;
+  nav {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
 
-        span {
-            color: #fff;
-            display: flex;
+    button {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      transition: 6s;
+      width: 45px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        div:nth-child(1) {
+          transform: rotate(-45deg);
+          transition: 0.5s transform;
         }
+      }
+
+      &.active {
+        div:nth-child(1) {
+          transform: rotate(-327deg);
+          transition: 0.75s;
+        }
+
+        div:nth-child(2) {
+          transform: translate(0px, -9px) rotate(33deg);
+        }
+
+        div:nth-child(3) {
+          transform: rotate(-33deg);
+        }
+      }
+
+      div {
+        background-color: #fff;
+        height: 3px;
+        margin: 6px 0;
+        transform-origin: left;
+        transition: 0.5s transform;
+        width: 100%;
+      }
     }
+
+    span {
+      color: #fff;
+      display: flex;
+      text-transform: uppercase;
+    }
+  }
 }
