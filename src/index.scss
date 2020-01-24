@@ -1,21 +1,22 @@
-@import './variables';
-@import './grid.scss';
-@import './dashboard/Dashboard';
-@import './login/Login';
-@import './components/header/Header';
-@import './components/layout/Layout';
-@import './components/sidebar/Sidebar';
+@import "./variables";
+@import "./grid.scss";
+@import "./dashboard/Dashboard";
+@import "./login/Login";
+@import "./components/header/Header";
+@import "./components/layout/Layout";
+@import "./components/sidebar/Sidebar";
+@import "./components/table/Table";
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

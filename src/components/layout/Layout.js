@@ -7,6 +7,7 @@ import "./Layout.scss";
 const Layout = ({ children }) => {
   const [location] = useState(useLocation());
   const [isLoginPage, setIsLoginPage] = useState(true);
+  const [sidebarOn, setSidebarOn] = useState(false);
 
   useEffect(() => {
     if (location.pathname !== "/") {
@@ -14,14 +15,18 @@ const Layout = ({ children }) => {
     }
   }, [location]);
 
+  const handleClick = () => {
+    setSidebarOn(!sidebarOn);
+  };
+
   if (isLoginPage) {
     return <React.Fragment>{children}</React.Fragment>;
   } else {
     return (
       <React.Fragment>
-        <Header />
+        <Header buttonPressed={sidebarOn} click={handleClick} />
         <main className="Layout">{children}</main>
-        <Sidebar />
+        <Sidebar showSidebar={sidebarOn} />
       </React.Fragment>
     );
   }

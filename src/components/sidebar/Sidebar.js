@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Sidebar = ({ show }) => {
+const Sidebar = ({ showSidebar }) => {
   const optionsMock = [
     { texto: "Opcion 1", link: "" },
     { texto: "Opcion 2", link: "" },
@@ -14,7 +14,7 @@ const Sidebar = ({ show }) => {
   };
 
   return (
-    <aside className={"Sidebar" + (show ? "active" : "")}>
+    <aside className={"Sidebar" + (showSidebar ? " active" : "")}>
       <ul>
         {options &&
           options.map((opt, index) => {

@@ -1,31 +1,36 @@
 .Sidebar {
-    background-color: $colorSecundario;
-    border-right: 1px solid #ddd;
-    height: calc(100vh - 72px);
+  background-color: $colorSecundario;
+  border-right: 1px solid #ddd;
+  height: calc(100vh - 72px);
+  left: -255px;
+  position: fixed;
+  top: 72px;
+  transition: 0.5s;
+  width: 250px;
+  z-index: 1;
+
+  &.active {
     left: 0;
-    position: fixed;
-    top: 72px;
-    width: 250px;
-    z-index: 1;
+  }
 
-    ul {
-        margin: 0;
-        padding: 0;
+  ul {
+    margin: 0;
+    padding: 0;
 
-        li {
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, .5);
-            color: #fff;
-            cursor: pointer;
-            display: flex;
-            height: 55px;
-            list-style: none;
-            padding: 0 20px;
-            transition: 0.2s;
+    li {
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      height: 55px;
+      list-style: none;
+      padding: 0 20px;
+      transition: 0.2s;
 
-            &:hover {
-                padding-left: 30px;
-            }
-        }
+      &:hover {
+        padding-left: 30px;
+      }
     }
+  }
 }
