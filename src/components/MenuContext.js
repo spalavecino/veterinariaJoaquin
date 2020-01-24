@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 const MenuContext = createContext(false);
 
-export const MenuProvider = MenuContext.Provider;
-export const MenuConsumer = MenuContext.Consumer;
+const MenuProvider = MenuContext.Provider;
+const MenuConsumer = MenuContext.Consumer;
+export { MenuProvider, MenuConsumer };
 export default MenuContext;
