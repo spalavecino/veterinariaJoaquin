@@ -1,5 +1,10 @@
 .Layout {
-    margin-left: 250px;
     margin-top: 72px;
     min-height: calc(100vh - 72px);
+    padding: 25px;
+    transition: 0.5s;
+
+    &.active {
+        margin-left: 250px;
+    }
 }

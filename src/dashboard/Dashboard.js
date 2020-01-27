@@ -38,9 +38,11 @@ const Dashboard = () => {
       }
     ];
 
-    setPetsData(petsData);
+    setPetsData(data);
+    console.log(`El state seteado en dashboard es ${petsData}`);
   }, []);
-  return <Table data={petsData} columns={columnsHeader} />;
+
+  return petsData && <Table data={petsData} columns={columnsHeader} />;
 };
 
 export default Dashboard;

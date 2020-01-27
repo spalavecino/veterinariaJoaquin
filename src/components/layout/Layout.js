@@ -25,7 +25,9 @@ const Layout = ({ children }) => {
     return (
       <React.Fragment>
         <Header buttonPressed={sidebarOn} click={handleClick} />
-        <main className="Layout">{children}</main>
+        <main className={"Layout" + (sidebarOn ? " active" : "")}>
+          {children}
+        </main>
         <Sidebar showSidebar={sidebarOn} />
       </React.Fragment>
     );
