@@ -1,12 +1,16 @@
 import React from "react";
 import "./Login.scss";
+import auth from "./resources";
 
 const Login = () => {
   return (
     <main className="Login">
       <div className="container">
         <h3>Ingresar</h3>
-        <button style={{ backgroundColor: "#fff", color: "#666" }}>
+        <button
+          style={{ backgroundColor: "#fff", color: "#666" }}
+          onClick={auth.signIn}
+        >
           <i className="fab fa-google"></i> <span>Sign in with Google</span>
         </button>
         <button style={{ backgroundColor: "#3b5998", color: "#fff" }}>

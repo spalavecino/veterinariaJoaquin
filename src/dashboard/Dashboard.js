@@ -35,6 +35,54 @@ const Dashboard = () => {
         firstConsultation: "01/01/2019",
         lastConsultation: "12/01/2020",
         debt: "$5000"
+      },
+      {
+        id: "aabc1",
+        owner: "Calderon, Daysi",
+        numberOfPets: 3,
+        firstConsultation: "01/01/2011",
+        lastConsultation: "12/12/2019",
+        debt: "$200"
+      },
+      {
+        id: "aabc2",
+        owner: "Palavecino, Sebastian",
+        numberOfPets: 3,
+        firstConsultation: "01/01/2012",
+        lastConsultation: "12/12/2018",
+        debt: "$500"
+      },
+      {
+        id: "aabc3",
+        owner: "Curti, Lucia",
+        numberOfPets: 1,
+        firstConsultation: "01/01/2019",
+        lastConsultation: "12/01/2020",
+        debt: "$5000"
+      },
+      {
+        id: "aaabc1",
+        owner: "Calderon, Daysi",
+        numberOfPets: 3,
+        firstConsultation: "01/01/2011",
+        lastConsultation: "12/12/2019",
+        debt: "$200"
+      },
+      {
+        id: "aaabc2",
+        owner: "Palavecino, Sebastian",
+        numberOfPets: 3,
+        firstConsultation: "01/01/2012",
+        lastConsultation: "12/12/2018",
+        debt: "$500"
+      },
+      {
+        id: "aaabc3",
+        owner: "Curti, Lucia",
+        numberOfPets: 1,
+        firstConsultation: "01/01/2019",
+        lastConsultation: "12/01/2020",
+        debt: "$5000"
       }
     ];
 
@@ -42,7 +90,7 @@ const Dashboard = () => {
     console.log(`El state seteado en dashboard es ${petsData}`);
   }, []);
 
-  return petsData && <Table data={petsData} columns={columnsHeader} />;
+  return petsData.length && <Table data={petsData} columns={columnsHeader} />;
 };
 
 export default Dashboard;

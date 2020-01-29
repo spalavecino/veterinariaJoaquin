@@ -1,7 +1,64 @@
 .Table {
+  border-collapse: collapse;
+  width: 100%;
+
   thead {
-    th {
-      border: 1px solid #666;
+    tr {
+      background-color: $colorOscuro2;
+      color: #fff;
+
+      th {
+        border-right: 1px solid #666;
+        font-weight: 400;
+        padding: 15px;
+        text-transform: uppercase;
+
+        &:last-child {
+          border-right: 1px solid $colorOscuro2;
+        }
+
+        &:first-child {
+          border-left: 1px solid $colorOscuro2;
+        }
+      }
+    }
+
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+
+      &:last-child {
+        border-bottom: 1px solid #ddd;
+      }
+
+      &:nth-child(even) {
+        background-color: $colorTerciario;
+      }
+
+      &:hover {
+        background-color: #564F6F;
+        color: #fff;
+      }
+
+      td {
+        border-right: 1px solid #ddd;
+        height: 30px;
+        padding: 10px;
+        text-align: right;
+
+
+        &:first-child {
+          border-left: 1px solid #ddd;
+          text-align: left;
+        }
+
+        &:last-child {
+          border-right: 1px solid #ddd;
+        }
+      }
     }
   }
 }
