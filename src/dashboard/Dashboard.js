@@ -10,6 +10,9 @@ const Dashboard = () => {
     "Últ. Consulta",
     "Deuda"
   ];
+  const [filteredPets, setFilteredPets] = useState([]);
+  const [filter, setFilter] = useState("");
+
   useEffect(() => {
     const data = [
       {
@@ -87,10 +90,38 @@ const Dashboard = () => {
     ];
 
     setPetsData(data);
-    console.log(`El state seteado en dashboard es ${petsData}`);
+    setFilteredPets(data);
   }, []);
 
-  return petsData.length && <Table data={petsData} columns={columnsHeader} />;
+  const filterPets = () => {
+    const filterLower = filter.toLocaleLowerCase();
+    const auxPetsData = petsData.filter(pet => {
+      return (
+        pet.owner.toLowerCase().includes(filterLower) ||
+        pet.numberOfPets.toString().includes(filterLower) ||
+        pet.firstConsultation.toString().includes(filterLower) ||
+        pet.lastConsultation.toString().includes(filterLower) ||
+        pet.debt.toString().includes(filterLower)
+      );
+    });
+
+    return auxPetsData;
+  };
+
+  return (
+    <div className="Dashboard">
+      <div className="input-icon">
+        <input
+          type="text"
+          onChange={e => setFilter(e.target.value)}
+          value={filter}
+        />
+        <i class="fas fa-search"></i>
+      </div>
+
+      {petsData.length && <Table data={filterPets()} columns={columnsHeader} />}
+    </div>
+  );
 };
 
 export default Dashboard;
